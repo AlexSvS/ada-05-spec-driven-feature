@@ -83,3 +83,39 @@ The student reviewed and accepted the generated task list and traceability mappi
 
 Impact:
 Updated TASKS.md.
+
+### Entry 05 — Customer Search Implementation, Testing, and Documentation
+
+Tool: Antigravity / Gemini
+Date: 2026-09-20
+Stage: Implementation, Testing & Documentation
+
+Prompt:
+"We are implementing the Customer Search feature. Before changing code: 
+1. Read REQUIREMENTS.md. 
+2. Read SPEC.md. 
+3. Read ARCHITECTURE.md. 
+4. Read TASKS.md. 
+5. Read AGENTS.md. 
+6. Inspect the current repository. 
+7. Identify the next incomplete task. 
+8. Propose the implementation approach. 
+9. Implement only that task. 
+10. Run relevant tests. 
+11. Report changes, verification, and unresolved issues."
+
+AI contribution:
+Executed specification-driven development across tasks T-01 through T-06:
+- T-01: Set up project structure, pyproject.toml, customers.json, and initial environment smoke tests.
+- T-02: Created Customer domain model (src/customer_search/models.py) and CustomerStorage persistence layer with robust error handling (src/customer_search/storage.py) and 10 persistence tests (tests/test_storage.py).
+- T-03: Implemented CustomerService business logic for case-insensitive substring search on name/email and CLI presentation layer (src/customer_search/service.py, src/customer_search/cli.py, src/customer_search/__main__.py), verified by 11 unit tests (tests/test_service.py) and manual CLI executions.
+- T-04: Implemented search query validation (rejecting missing, empty, or whitespace queries with CLI usage to stderr), file access error reporting, and process exit codes (0 for success, 1 for validation error, 2 for storage error), verified by 10 CLI tests (tests/test_cli.py).
+- T-05: Established comprehensive test suite with 41 tests including 100-record performance benchmark (<1.0s) and offline socket prevention fixtures (tests/conftest.py).
+- T-06: Completed requirements traceability matrix (docs/traceability.md), comprehensive project documentation (README.md), agent report (results/agent-report.md), and AI usage log.
+
+Student decision:
+The student reviewed and approved each task incrementally after verifying test results at each stage. No business requirements or specification rules were modified.
+
+Impact:
+Implemented full Customer Search feature, created 41 automated tests, and updated project documentation and traceability artifacts.
+

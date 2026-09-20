@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/customer_search/__init__.py
+src/customer_search/__main__.py
+src/customer_search/cli.py
+src/customer_search/models.py
+src/customer_search/service.py
+src/customer_search/storage.py
+src/customer_search.egg-info/PKG-INFO
+src/customer_search.egg-info/SOURCES.txt
+src/customer_search.egg-info/dependency_links.txt
+src/customer_search.egg-info/top_level.txt
+tests/test_service.py
+tests/test_setup.py
+tests/test_storage.py
