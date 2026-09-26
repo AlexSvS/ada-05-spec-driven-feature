@@ -12,6 +12,10 @@ FR-03: The system shall perform a partial, case-insensitive substring match agai
 FR-04: The system shall output all matching customer records displaying their ID, name, and email address in a readable format.
 FR-05: The system shall display a clear notification message (e.g., "No customers found matching '<term>'") when no records match.
 FR-06: The system shall validate input and display an error message with CLI usage instructions if the query string is empty or missing.
+FR-07: The system shall return customers whose name or email contains the search query as a substring.
+FR-08: The system shall display matching customer records in a consistent and deterministic order.
+FR-09: The system shall return an appropriate error message when the provided search query contains invalid characters or an invalid input format.
+
 
 ## Non-Functional Requirements
 NFR-01: The CLI shall return search results within 1.0 second for datasets of up to 100 local customer records.
