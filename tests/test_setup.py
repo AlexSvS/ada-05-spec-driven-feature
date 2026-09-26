@@ -15,7 +15,7 @@ def test_package_import():
     import customer_search
 
     assert hasattr(customer_search, "__version__")
-    assert customer_search.__version__ == "0.1.0"
+    assert customer_search.__version__ == "0.2.0"
 
 
 def test_customers_json_exists_and_valid():
